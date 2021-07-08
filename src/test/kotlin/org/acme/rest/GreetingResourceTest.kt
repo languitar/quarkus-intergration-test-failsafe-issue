@@ -15,15 +15,7 @@ class GreetingResourceTest {
     @Inject
     lateinit var repo: FooEntityRepo
 
-    @BeforeEach
-    @AfterEach
-    @Transactional
-    fun clearDatabase() {
-
-    }
-
     @Test
-    @Transactional
     fun testHelloEndpoint() {
         given()
             .`when`().get("/greeting")
